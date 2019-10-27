@@ -2,9 +2,8 @@ package ru.avalon.java.dev.j10.labs;
 
 import java.sql.Date;
 import java.util.Comparator;
-import ru.avalon.java.dev.j10.labs.Equasion.*;
-import ru.avalon.java.dev.j10.labs.Object.*;
-import ru.avalon.java.dev.j10.labs.Sorters.*;
+import ru.avalon.java.dev.j10.labs.*;
+
 
 public class Main {
 
