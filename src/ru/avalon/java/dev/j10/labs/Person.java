@@ -30,4 +30,23 @@ public interface Person extends Comparable {
      * {@link Date}
      */
     Date getBirthDate();
+    
+    default int compareTo(Object o) {
+        if (o instanceof Person) {
+            Person that = (Person) o;
+            if (getName().compareTo(that.getName()) < 0) {
+                return false;
+            } else if (getName().compareTo(that.getName()) > 0) {
+                return true;
+            } else if (getName().compareTo(that.getName()) == 0) {
+                if (getBirthDate().compareTo(that.getBirthDate()) > 0) {
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+
+        }
+        return true;
+    }
 }
