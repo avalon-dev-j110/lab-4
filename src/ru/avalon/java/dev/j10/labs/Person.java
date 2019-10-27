@@ -35,18 +35,17 @@ public interface Person extends Comparable {
         if (o instanceof Person) {
             Person that = (Person) o;
             if (getName().compareTo(that.getName()) < 0) {
-                return false;
+                return -1;
             } else if (getName().compareTo(that.getName()) > 0) {
-                return true;
+                return 1;
             } else if (getName().compareTo(that.getName()) == 0) {
                 if (getBirthDate().compareTo(that.getBirthDate()) > 0) {
-                    return false;
+                    return -1;
                 } else {
-                    return true;
+                    return 1;
                 }
             }
 
         }
-        return true;
-    }
+        return 1;
 }
